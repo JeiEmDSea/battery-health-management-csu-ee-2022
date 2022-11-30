@@ -1,0 +1,14 @@
+{
+  "workbench.colorTheme": "Visual Studio Dark - C++",
+  "material-icon-theme.activeIconPack": "none",
+  "material-icon-theme.folders.associations": {
+    "arduino": "arduino",
+    "schematic": "core",
+    "parts": "include"
+  },
+  "material-icon-theme.files.associations": {
+    "*.fzz": "fritzing",
+    "*.fzpz": "fritzing",
+    "*.fzb": "fritzing"
+  }
+}
