@@ -3,3 +3,5 @@
 [LiquidCrystal_I2C](https://github.com/johnrickman/LiquidCrystal_I2C)
 
 [SdFat](https://github.com/greiman/SdFat)
+
+[SimpleRelay](https://github.com/JSC-electronics/SimpleRelay)

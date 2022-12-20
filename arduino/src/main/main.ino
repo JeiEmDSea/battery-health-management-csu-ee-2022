@@ -1,6 +1,7 @@
 #include "LiquidCrystal_I2C.h"
 #include "DS3231.h"
 #include "SdFat.h"
+#include "SimpleRelay.h"
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 DS3231 rtc(SDA, SCL);
