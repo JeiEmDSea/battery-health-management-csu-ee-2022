@@ -5,3 +5,5 @@
 [SdFat](https://github.com/greiman/SdFat)
 
 [SimpleRelay](https://github.com/JSC-electronics/SimpleRelay)
+
+[Voltmeter](https://gitlab.com/yesbotics/libs/arduino/voltmeter)
