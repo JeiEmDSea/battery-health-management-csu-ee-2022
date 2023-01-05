@@ -7,3 +7,5 @@
 [SimpleRelay](https://github.com/JSC-electronics/SimpleRelay)
 
 [Voltmeter](https://gitlab.com/yesbotics/libs/arduino/voltmeter)
+
+[Precise LM35](https://github.com/belidzs/PreciseLM35)
