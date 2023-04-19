@@ -3,19 +3,18 @@
 
 #include <Arduino.h>
 
-class Voltmeter {
+class Voltmeter
+{
 
 public:
-	Voltmeter(unsigned int sensorPin, unsigned int maxVoltage, unsigned int lowerBound = 0, unsigned int upperBoundB = 1023);
+	Voltmeter(unsigned int sensorPin, unsigned int maxVoltage, int offset);
 	float getVoltage();
 	void initialize();
-protected:
 
 private:
-	unsigned int maxVoltage = 0;
 	unsigned int sensorPin;
-	unsigned int lowerBound;
-	unsigned int upperBound;
+	unsigned int maxVoltage;
+	int offset;
 };
 
 #endif

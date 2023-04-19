@@ -1,11 +1,10 @@
 #include "Voltmeter.h"
 
-Voltmeter::Voltmeter(unsigned int sensorPin, unsigned int maxVoltage, unsigned int lowerBound = 0, unsigned int upperBound = 1023)
+Voltmeter::Voltmeter(unsigned int sensorPin, unsigned int maxVoltage, int offset)
 {
 	this->maxVoltage = maxVoltage;
 	this->sensorPin = sensorPin;
-	this->lowerBound = lowerBound;
-	this->upperBound = upperBound;
+	this->offset = offset;
 }
 
 void Voltmeter::initialize()
@@ -15,8 +14,10 @@ void Voltmeter::initialize()
 
 float Voltmeter::getVoltage()
 {
-	unsigned long value = ((analogRead(this->sensorPin) + (5 / 2)) / 5) * 5;
-	long mapped = map(value, this->lowerBound, this->upperBound, 0, (long)(this->maxVoltage * 1000));
-	float result = (float)(mapped) / (float)1000;
-	return result > 0 ? result : 0;
+	int sensorValue = analogRead(this->sensorPin);
+	double voltage = map(sensorValue, 0, 1023, 0, this->maxVoltage * 100) + offset;
+	voltage /= 100;
+	voltage -= 0.3;
+
+	return voltage <= 0 ? 0 : voltage;
 }
